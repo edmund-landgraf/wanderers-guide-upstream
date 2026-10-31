@@ -3,7 +3,7 @@ import { pathToFileURL } from 'node:url';
 class ProbeError extends Error {}
 
 export async function checkProduction({
-  api = 'https://fdrjqcyjklatdrmjdnys.supabase.co',
+  api = process.env.WG_MONITOR_API_URL || 'https://fdrjqcyjklatdrmjdnys.supabase.co',
   site = 'https://wanderersguide.app',
   anonKey = process.env.WG_MONITOR_ANON_KEY,
   request = fetch,
