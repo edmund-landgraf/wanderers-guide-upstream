@@ -25,4 +25,5 @@ jobs:
         env:
           WG_MONITOR_ANON_KEY: ${{ vars.WG_MONITOR_ANON_KEY }}
           WG_MONITOR_API_URL: ${{ vars.WG_MONITOR_API_URL }}
+          WG_MONITOR_SITE_URL: ${{ vars.WG_MONITOR_SITE_URL }}
         run: node scripts/production-health.mjs
