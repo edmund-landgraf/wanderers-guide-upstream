@@ -4,7 +4,7 @@ class ProbeError extends Error {}
 
 export async function checkProduction({
   api = process.env.WG_MONITOR_API_URL || 'https://fdrjqcyjklatdrmjdnys.supabase.co',
-  site = 'https://wanderersguide.app',
+  site = process.env.WG_MONITOR_SITE_URL || 'https://wanderersguide.app',
   anonKey = process.env.WG_MONITOR_ANON_KEY,
   request = fetch,
 } = {}) {
