@@ -24,4 +24,5 @@ jobs:
       - name: Verify public content, frontend and authentication availability
         env:
           WG_MONITOR_ANON_KEY: ${{ vars.WG_MONITOR_ANON_KEY }}
+          WG_MONITOR_API_URL: ${{ vars.WG_MONITOR_API_URL }}
         run: node scripts/production-health.mjs
